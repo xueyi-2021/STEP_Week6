@@ -4,6 +4,8 @@ malloc challenge
 
 <br>
 
+ほぼ全部メモみたいなものになってる、、すみませんでした
+
 #### 自分用メモ
 
 - 8 <= |size| <=4000  is a multiple of 8 bytes（なぜ4096ではないの？
@@ -12,7 +14,7 @@ malloc challenge
 
 - デフォルト結果
 
-  - ![https://github.com/xueyi-2021/STEP_Week6/blob/master/simple_malloc.png]()
+  - ![](https://github.com/xueyi-2021/STEP_Week6/blob/master/simple_malloc.png)
 
     Challenge done!
 
@@ -52,7 +54,7 @@ malloc challenge
 
 - 979,70 | 641,40 | 755,50 | 7237,71 | 4020,74
 - hikaliumさんと同じです！
-- ![https://github.com/xueyi-2021/STEP_Week6/blob/master/best_fit_malloc.png]()
+- ![](https://github.com/xueyi-2021/STEP_Week6/blob/master/best_fit_malloc.png)
 
 <br>
 
@@ -61,11 +63,10 @@ malloc challenge
 #### 方針
 
 - sizeのサイズは0~4096なので適当に分ける
-  - 0~1024, 1025~2048, 2049~3072, 3073~4096のように4つ分ける
+  - 0\~1024, 1025\~2048, 2049\~3072, 3073\~4096のように4つ分ける
   - と思って4つのmy_heapを定義したい時コメント見た↓↓↓
     - (DO NOT ADD ANOTHER STATIC VARIABLES!)
-    - これはどういう意味だろう…
-    - わからないのでとりあえず4つ定義した
+    - これはどういう意味だろう…わからないのでとりあえず4つ定義した
 
 
 
@@ -75,7 +76,7 @@ malloc challenge
 - my_heap_t my_bins[1];は実行できたが、どこが問題点なの…
 - とりあえず2つのbinにしてみたいと思う
   - またkilled......
-  - An allocated object is broken!make: *** [run] Abort trap: 6
+  - 新しいエラー：An allocated object is broken!make: *** [run] Abort trap: 6
   - バグの原因が判明、多分初期化の問題、実行はとりあえずできた
 - 瓶を増やす！
 
@@ -94,9 +95,9 @@ malloc challenge
 - 時間だいぶ短くなった！！（チャレンジ4と5だけ…）
   - 一つの瓶の場合では特定な入力パターンに対して早いかも、複数の瓶の場合は一般的に早くなる(汎用性が高い)っていう感じ
 - 実質加速化のbest-fitなのでUtilizationは変化しない
-- ![https://github.com/xueyi-2021/STEP_Week6/blob/master/free_list_bin_malloc.png]()
+- ![](https://github.com/xueyi-2021/STEP_Week6/blob/master/free_list_bin_malloc.png)
 
-
+<br>
 
 ### 3. 空き領域の結合(merge)
 
