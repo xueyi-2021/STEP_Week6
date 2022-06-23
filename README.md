@@ -14,15 +14,7 @@ malloc challenge
 
 - デフォルト結果
 
-  - ![](https://github.com/xueyi-2021/STEP_Week6/blob/master/simple_malloc.png)
-
-    Challenge done!
-
-    Please copy & paste the following data in the score sheet!
-
-    10,70,6,40,93,7,17472,15,12332,15,
-
-    
+  - 10,70 | 6,40 | 93,7 | 17472,15 | 12332,15
 
 - データ構造
 
@@ -36,13 +28,13 @@ malloc challenge
 
 - sizeof(my_metadata_t) = 16
 
-
+<br>
 
 ### 1. First Fit -> Best Fit
 
 #### 方針&メモ
 
-- while metadata:ループでで全ての空き領域をアクセスして、metadata.size > sizeのmetadata.sizeの中で一番小さいmetadataのアドレスから長さsizeの領域を確保
+- while metadata:ループで全ての空き領域をアクセスして、metadata.size > sizeのmetadata.sizeの中で一番小さいmetadataのアドレスから長さsizeの領域を確保
 
 - 一番前のmetadataの位置: my_heap.free_headに記録される
 
@@ -54,7 +46,7 @@ malloc challenge
 
 - 979,70 | 641,40 | 755,50 | 7237,71 | 4020,74
 - hikaliumさんと同じです！
-- ![](https://github.com/xueyi-2021/STEP_Week6/blob/master/best_fit_malloc.png)
+- ![](https://github.com/xueyi-2021/STEP_Week6/blob/master/best_fit_malloc.png =200)
 
 <br>
 
@@ -95,7 +87,7 @@ malloc challenge
 - 時間だいぶ短くなった！！（チャレンジ4と5だけ…）
   - 一つの瓶の場合では特定な入力パターンに対して早いかも、複数の瓶の場合は一般的に早くなる(汎用性が高い)っていう感じ
 - 実質加速化のbest-fitなのでUtilizationは変化しない
-- ![](https://github.com/xueyi-2021/STEP_Week6/blob/master/free_list_bin_malloc.png)
+- ![](https://github.com/xueyi-2021/STEP_Week6/blob/master/free_list_bin_malloc.png =200)
 
 <br>
 
